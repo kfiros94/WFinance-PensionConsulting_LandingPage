@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Advice</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Roboto:wght@400;700&display=swap');
+    html, body {
+      font-family: 'Alef', 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+  <!-- NavBar -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+      <div class="text-2xl font-bold">עצת הזהב</div>
+      <div>
+        <a href="#about" class="text-gray-700 hover:text-gray-900 mx-4 text-xl">אודות</a>
+        <a href="#registration" class="text-gray-700 hover:text-gray-900 mx-4 text-xl">הרשמה</a>
+        <a href="#contact" class="text-gray-700 hover:text-gray-900 mx-4 text-xl">צור קשר</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--Hero Section-->
+  <section class="bg-cover bg-center" style="background-image: url('./public/Gold.jpg');">
+    <div class="bg-black bg-opacity-50">
+      <div class="container mx-auto px-4 py-24 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl text-white font-extrabold mb-6 leading-tight">
+            עצת הזהב - תכנון פיננסי וניצול הטבות מס בגיל השלישי
+          </h1>
+          
+        <a href="#registration" 
+           class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-2xl py-4 px-8 rounded-full transition duration-300 inline-block">
+          הירשמו עכשיו
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--Info Section-->
+  <section id="about" class="container mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center mb-10">על הכנס</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div class="text-center text-2xl">
+        <h1 class="text-5xl font-extrabold mb-6">כנס אישי לדיירי "בית אילדין"</h1>
+        <p class="leading-normal mb-4">
+          הנכם מוזמנים לכנס שייערך ביום ג' בתאריך 18/02/2025 בשעה 19:00 באולם הכנסים שלכם.<br>
+          יש להרשם על מנת להבטיח את מקומכם בכדי שנוכל להערך בהתאם לפי כמות המשתתפים להבאת הכיבוד וחלוקת שי צנוע בסוף הכנס.
+        </p>
+        <img src="./public/WfinanceLand.jpeg" alt="WFinanceLogo" class="mx-auto mt-4 w-120">
+      </div>
+      
+      <div class="flex justify-center items-center">
+        <img src="./public/financeCons.jpg" alt="תמונה של כנס" class="rounded-lg shadow-lg max-w-full h-auto">
+      </div>
+    </div>
+  </section>
+  
+  <!--Registration Section)-->
+  <section id="registration" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-10">הרשמה לכנס</h2>
+      <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+        
+        <form action="/submit-form" method="POST" class="space-y-8">
+          
+          <!--Email-->
+          <div>
+            <label for="email" class="block text-gray-800 font-bold text-2xl mb-2">
+              אימייל <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="example@example.com"
+              class="w-full border border-gray-300 rounded-lg text-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          
+          <!-- FullName-->
+          <div>
+            <label for="fullName" class="block text-gray-800 font-bold text-2xl mb-2">
+              שם מלא <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              required
+              placeholder="הכנס/י את שמך המלא"
+              class="w-full border border-gray-300 rounded-lg text-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Age-->
+          <div>
+            <label for="age" class="block text-gray-800 font-bold text-2xl mb-2">
+              גיל <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              required
+              placeholder="לדוגמה: 80"
+              class="w-full border border-gray-300 rounded-lg text-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+<!-- Couple or not -->
+<div>
+    <label class="block text-gray-800 font-bold text-2xl mb-2">
+      יחיד/זוג? <span class="text-red-500">*</span>
+    </label>
+  
+    <div class="flex items-center mb-2">
+      <input
+        type="radio"
+        id="single"
+        name="attendance"
+        value="single"
+        required
+        class="h-6 w-6 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mr-2"
+      />
+      <label for="single" class="text-xl text-gray-700">
+        יחיד
+      </label>
+    </div>
+  
+    <div class="flex items-center">
+      <input
+        type="radio"
+        id="couple"
+        name="attendance"
+        value="couple"
+        class="h-6 w-6 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mr-2"
+      />
+      <label for="couple" class="text-xl text-gray-700">
+        זוג
+      </label>
+    </div>
+  </div>
+  
+          <!-- Send Button-->
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="bg-blue-700 text-white text-2xl font-bold py-4 px-8 rounded-lg hover:bg-blue-800 transition-colors"
+            >
+              שלח הרשמה
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--Contact Section-->
+  <section id="contact" class="container mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center mb-10">צור קשר</h2>
+    <div class="flex flex-col items-center">
+      <p class="text-2xl mb-6">
+        במידה ויש לכם שאלות, אתם מוזמנים ליצור קשר
+        <span dir="ltr" style="unicode-bidi: bidi-override;">
+          <a href="mailto:idana@w-finance.co.il" class="text-blue-600 hover:underline">
+              idana@w-finance.co.il
+          </a>
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!--Footer-->
+  <footer class="bg-white py-6 shadow-inner">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-600 text-xl">© 2025 עצת הזהב. כל הזכויות שמורות.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
