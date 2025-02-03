@@ -12,7 +12,7 @@ const PORT = 3000;
 // Use environment variables to set up the credentials
 const credentials = {
   client_email: process.env.GOOGLE_CLIENT_EMAIL,
-  private_key: process.env.GOOGLE_PRIVATE_KEY,
+  private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
 };
 
 // Destructure from the credentials object (note the variable name is "credentials" not "CREDENTIALS")
