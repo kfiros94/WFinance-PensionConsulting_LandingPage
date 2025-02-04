@@ -62,7 +62,9 @@ app.post('/submit-form', async (req, res) => {
         </head>
         <body style="text-align:center; margin-top:50px;">
           <h1>תודה על ההרשמה!</h1>
-          <p>הנתונים נשמרו בהצלחה בגיליון Google Sheets.</p>
+          <p>ההרשמה הקלטה בהצלחה.</p>
+          <p>נתראה בכנס ביום ג' בתאריך 18/02/2025</p>
+          <p>בשעה 19:00 🙂</p>
           <a href="/">לחזרה לעמוד הראשי</a>
         </body>
       </html>
